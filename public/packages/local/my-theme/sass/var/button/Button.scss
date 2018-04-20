@@ -1,0 +1,3 @@
+$button-primary-base-color: dynamic($base-primary-color);
+$button-primary-border-color: dynamic(mix(#000, $button-primary-base-color, 7%));
+$button-primary-background-color: dynamic($button-primary-base-color);
