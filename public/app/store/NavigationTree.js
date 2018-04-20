@@ -1,7 +1,7 @@
 Ext.define('Admin.store.NavigationTree', {
     extend: 'Ext.data.TreeStore',
 
-   // storeId: 'NavigationTree',
+    // storeId: 'NavigationTree',
 
     fields: [{
         name: 'text'
@@ -11,30 +11,44 @@ Ext.define('Admin.store.NavigationTree', {
         expanded: true,
         children: [
             {
-
-                text: '设备',
-                iconCls: 'x-fa fa-desktop',
-                rowCls: 'nav-tree-badge nav-tree-badge-new',
-                viewType: 'domainList',
-              //  routeId: 'domainList', // routeId defaults to viewType
-
                 text: '工作台',
-                iconCls: 'x-fa fa-desktop',
-              //  rowCls: 'nav-tree-badge nav-tree-badge-new',
+                // iconCls: 'x-fa fa-desktop',
                 viewType: 'workbench',
                 routeId: 'workbench', // routeId defaults to viewType
-
                 leaf: true
+            },
+            {
+                text: '安全控制',
+                //   iconCls: 'x-fa fa-desktop',
+                viewType: 'safetyControl',
+                routeId: 'safetyControl', // routeId defaults to viewType
+                expanded: true,
+                children: [
+                    {
+                        text: '用户',
+                        //      iconCls: 'x-fa fa-file-o',
+                        viewType: 'userList',
+                        leaf: true
+                    },
+
+                    {
+                        text: '角色',
+                        //      iconCls: 'x-fa fa-exclamation-triangle',
+                        viewType: 'page404',
+                        leaf: true
+                    },
+                    {
+                        text: '权限',
+                        //      iconCls: 'x-fa fa-exclamation-triangle',
+                        viewType: 'page404',
+                        leaf: true
+                    }
+                ]
             },
             {
                 text: '告警日志',
                 itemd: 'pages-parent1',
                 iconCls: 'x-fa fa-desktop',
-
-                rowCls: 'nav-tree-badge nav-tree-badge-new',
-
-             //   rowCls: 'nav-tree-badge nav-tree-badge-new',
-
                 viewType: 'admindashboard',
                 routeId: 'dashboard', // routeId defaults to viewType
                 leaf: true
@@ -42,13 +56,11 @@ Ext.define('Admin.store.NavigationTree', {
             {
                 text: '设备',
                 iconCls: 'x-fa fa-desktop',
-
-               rowCls: 'nav-tree-badge nav-tree-badge-new',
-
+                //  rowCls: 'nav-tree-badge nav-tree-badge-new',
                 viewType: 'dev',
                 routeId: 'dev', // routeId defaults to viewType
                 expanded: true,
-               // leaf: true,
+                // leaf: true,
                 children: [
                     {
                         text: '漫游区',
@@ -63,14 +75,12 @@ Ext.define('Admin.store.NavigationTree', {
                         viewType: 'page404',
                         leaf: true
                     }
-                    ]
+                ]
             },
             {
                 text: '版本库',
                 iconCls: 'x-fa fa-send',
-
-          //      rowCls: 'nav-tree-badge nav-tree-badge-hot',
-
+                //      rowCls: 'nav-tree-badge nav-tree-badge-hot',
                 viewType: 'email',
                 leaf: true
             },
@@ -96,7 +106,7 @@ Ext.define('Admin.store.NavigationTree', {
                 text: 'Pages',
                 iconCls: 'x-fa fa-leanpub',
                 expanded: true,
-               // selectable: false,
+                // selectable: false,
                 //routeId: 'pages-parent',
 
                 children: [
@@ -125,11 +135,9 @@ Ext.define('Admin.store.NavigationTree', {
                         viewType: 'lockscreen',
                         leaf: true
                     },
-
-
                     {
-                        text: 'login',
-                        iconCls: 'x-fa fa-pencil-square-o',
+                        text: 'Login',
+                        iconCls: 'x-fa fa-lock',
                         viewType: 'login',
                         leaf: true
                     },

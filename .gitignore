@@ -1,0 +1,12 @@
+/.idea
+/node_modules
+/etc/config.js
+/etc/config_linux.js
+/sql/diff/*.sql
+/sql/bk/*.sql
+/public/build
+/public/bootstrap.css
+/public/bootstrap.js
+/public/classic.jsonp
+/public/classic.json
+/public/sass/example

@@ -16,11 +16,11 @@ Ext.define('Admin.Application', {
    ],
 
 
-    mainView: 'Admin.view.main.Main',
+   // mainView: 'Admin.view.main.Main',
 
     launch: function () {
         // TODO - Launch the application
-      /*  store=Ext.create('Admin.store.domain.Domain');
+       store=Ext.create('Admin.store.domain.Domain');
         store.on('load',function(store, options){
             stores: ['NavigationTree']
         })
@@ -43,7 +43,7 @@ Ext.define('Admin.Application', {
                 //Ext.Msg.alert('提示', '删除失败!');
                 window.location = "login.html";
             }
-        })*/
+        })
         /*Ext.Ajax.on('beforerequest', function(conn,options,eopts){
             Ext.Msg.alert("DDD")
         })*/
