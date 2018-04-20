@@ -1,0 +1,5 @@
+@include extjs-button-small-ui(
+$ui: 'primary',
+$border-color: $button-primary-border-color,
+$background-color: $button-primary-background-color
+);
